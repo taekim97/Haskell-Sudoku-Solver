@@ -31,6 +31,7 @@ getHomeR = defaultLayout [whamlet|Hello World!|]
 
 type Board = [[Int]]
 
+-- Generates a new board and returns a JSON representation of the board
 getBoardR :: Handler Value
 getBoardR = returnJson $ Board[[Just 2, Just 3, Just 4],[Just 5, Just 6, Just 7]] (Just True)
 
