@@ -47,14 +47,12 @@ getHomeR = defaultLayout [whamlet|Hello World!|]
 -- Generates a new board and returns a JSON representation of the board
 getBoardR :: Handler Value
 getBoardR = do
-
+    addHeader "Access-Control-Allow-Origin" "*"
     d <- liftIO ( (eitherDecode <$> getJSON) :: IO (Either String Board))
 
     case d of
         Left _ -> returnJson $ Board[[Just 2, Just 3, Just 4],[Just 5, Just 6, Just 7]] (Just True)
         Right ps -> returnJson $ ps
-
---getBoardR = returnJson $ Board[[Just 2, Just 3, Just 4],[Just 5, Just 6, Just 7]] (Just True)
 
 
 main :: IO ()
