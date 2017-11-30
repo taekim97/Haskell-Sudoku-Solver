@@ -126,18 +126,20 @@ checkCol (x:xs) visited i = do
         Nothing -> checkCol xs visited i
 
 -- Check Cells
+-- Board -> Row -> Col -> Bool
 checkCells :: [[Maybe Int]] -> Int -> Int -> Bool
 checkCells _ 0 _ = True
-checkCells _ _ 0 = True
+checkCells b r 0 = checkCells b (r - 3) 9
 checkCells b r c =
     if checkCell b [0,0,0,0,0,0,0,0,0] r 0 c 0 then
-        checkCells b (r - 3) c && checkCells b r (c - 3)
+        checkCells b r (c - 3)
     else False
 
 checkCell :: [[Maybe Int]] -> [Int] -> Int -> Int ->  Int -> Int -> Bool
-checkCell _ _ r 3 c 3 = True
+checkCell _ _ _ 3 _ 3 = True
 checkCell b v r rl c 3 = checkCell b v (r - 1) rl c 0
 checkCell b v r rl c cl =
+
     case b!!(r - 1 - rl)!!(c - 1 - cl) of
         Just n ->
             if n > 9 || n < 1 then

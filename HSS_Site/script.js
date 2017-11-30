@@ -3,7 +3,7 @@ var gloBal = []
 $(document).ready(function () {
 
     board = [];
-    let url = 'http://localhost:3000/newBoard';
+    let url = 'http://localhost:3000/checkBoard';
 
 
     $.ajax({
@@ -23,7 +23,7 @@ $(document).ready(function () {
 
 function drawNewBoard (data) {
     board = data.board;
-
+    console.log(data);
     for (let row = 0; row < board.length; row++) {
         let rowID = 'row' + row;
         $('table.sudoku').append("<tr id='" + rowID + "'></tr>");
