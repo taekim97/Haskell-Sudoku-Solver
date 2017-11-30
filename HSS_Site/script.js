@@ -1,8 +1,9 @@
-var gloBal = []
 
 $(document).ready(function () {
+    // Global Variables
+    var gameState = 0; // 0 = Menu, 1 = Solver
 
-    board = [];
+    var board = []
     let url = 'http://localhost:3000/checkBoard';
 
 
@@ -80,15 +81,6 @@ function submitBoard(){
 
     sudokuEntries['board'] = board
 
-    //pass to server
-    /*let url = 'http://localhost:3000/newBoard';
-
-    $.ajax({
-        url: url,
-        success: submissionResults,
-        data: null,
-        dataType: 'json'
-    })*/
 
 }
 

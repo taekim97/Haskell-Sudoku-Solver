@@ -136,8 +136,8 @@ checkCells b r c =
     else False
 
 checkCell :: [[Maybe Int]] -> [Int] -> Int -> Int ->  Int -> Int -> Bool
-checkCell _ _ _ 3 _ 3 = True
-checkCell b v r rl c 3 = checkCell b v (r - 1) rl c 0
+checkCell _ _ _ 3 _ _ = True
+checkCell b v r rl c 3 = checkCell b v r (rl + 1) c 0
 checkCell b v r rl c cl =
 
     case b!!(r - 1 - rl)!!(c - 1 - cl) of
