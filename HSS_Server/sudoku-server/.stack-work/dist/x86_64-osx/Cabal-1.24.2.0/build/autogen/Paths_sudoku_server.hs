@@ -29,12 +29,12 @@ version :: Version
 version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
-bindir     = "/Users/terry/Desktop/Haskell-Sudoku-Solver/.stack-work/install/x86_64-osx/lts-9.12/8.0.2/bin"
-libdir     = "/Users/terry/Desktop/Haskell-Sudoku-Solver/.stack-work/install/x86_64-osx/lts-9.12/8.0.2/lib/x86_64-osx-ghc-8.0.2/sudoku-server-0.1.0.0"
-dynlibdir  = "/Users/terry/Desktop/Haskell-Sudoku-Solver/.stack-work/install/x86_64-osx/lts-9.12/8.0.2/lib/x86_64-osx-ghc-8.0.2"
-datadir    = "/Users/terry/Desktop/Haskell-Sudoku-Solver/.stack-work/install/x86_64-osx/lts-9.12/8.0.2/share/x86_64-osx-ghc-8.0.2/sudoku-server-0.1.0.0"
-libexecdir = "/Users/terry/Desktop/Haskell-Sudoku-Solver/.stack-work/install/x86_64-osx/lts-9.12/8.0.2/libexec"
-sysconfdir = "/Users/terry/Desktop/Haskell-Sudoku-Solver/.stack-work/install/x86_64-osx/lts-9.12/8.0.2/etc"
+bindir     = "/Users/terry/Desktop/Haskell-Sudoku-Solver/HSS_Server/.stack-work/install/x86_64-osx/lts-9.12/8.0.2/bin"
+libdir     = "/Users/terry/Desktop/Haskell-Sudoku-Solver/HSS_Server/.stack-work/install/x86_64-osx/lts-9.12/8.0.2/lib/x86_64-osx-ghc-8.0.2/sudoku-server-0.1.0.0"
+dynlibdir  = "/Users/terry/Desktop/Haskell-Sudoku-Solver/HSS_Server/.stack-work/install/x86_64-osx/lts-9.12/8.0.2/lib/x86_64-osx-ghc-8.0.2"
+datadir    = "/Users/terry/Desktop/Haskell-Sudoku-Solver/HSS_Server/.stack-work/install/x86_64-osx/lts-9.12/8.0.2/share/x86_64-osx-ghc-8.0.2/sudoku-server-0.1.0.0"
+libexecdir = "/Users/terry/Desktop/Haskell-Sudoku-Solver/HSS_Server/.stack-work/install/x86_64-osx/lts-9.12/8.0.2/libexec"
+sysconfdir = "/Users/terry/Desktop/Haskell-Sudoku-Solver/HSS_Server/.stack-work/install/x86_64-osx/lts-9.12/8.0.2/etc"
 
 getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath
 getBinDir = catchIO (getEnv "sudoku_server_bindir") (\_ -> return bindir)
