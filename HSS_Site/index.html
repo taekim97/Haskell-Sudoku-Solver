@@ -4,18 +4,31 @@
 
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+        <script src="particles.min.js"></script>
         <script src="script.js"></script>
+
 
     </head>
 
-    <body>
+    <body ng-app="sudokuApp" ng-controller="mainCtrl" id="particles-js">
 
         <!-- Welcome Page -->
-        <div class="welcome">
-            
+        <div class="menu" ng-show="gameState == 0">
+            <div class="menuLogo">Sudoku</div>
+            <button ng-click="difficultyMenu()" class="menuButton" type="button">Play!</button>
         </div>
 
-        <div class="wrapper">
+        <!-- Difficulty Menu -->
+        <div class="menu" ng-show="gameState == 1">
+            <div class="menuLogo">Difficulty</div>
+            <button ng-click="newPuzzle(0)" class="menuButton" type="button">Easy</button>
+            <button ng-click="newPuzzle(1)" class="menuButton" type="button">Medium</button>
+            <button ng-click="newPuzzle(2)" class="menuButton" type="button">Hard</button>
+        </div>
+
+
+        <div class="solver" ng-show="gameState == 2">
             <table class="sudoku" id="sudoku">
             </table>
         </div>

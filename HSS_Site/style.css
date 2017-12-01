@@ -1,3 +1,8 @@
+body{
+    background-image: url("transparentTexture.png");
+
+}
+
 .wrapper {
     width: 100%;
 }
@@ -37,4 +42,29 @@ table.sudoku {
 .sudoku input {
     height:100%;
     width:100%
+}
+
+/* Menu CSS */
+
+.menu {
+    height: 400px;
+    width : 250px;
+
+
+    margin: 0 auto;
+}
+
+.menuLogo {
+    text-align: center;
+    height:75px;
+    width: 150px;
+    margin: 0 auto;
+    padding: 30px 0;
+    font-size: 45px;
+}
+.menuButton {
+    text-align: center;
+    width: 75px;
+    display: block;
+    margin: 0 auto;
 }

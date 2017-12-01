@@ -1,7 +1,59 @@
+particlesJS.load('particles-js', 'particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});
 
+var app = angular.module("sudokuApp", []);
+
+app.controller("mainCtrl", function($scope, $http) {
+    $scope.gameState = 0;
+    $scope.board = [];
+
+    $scope.difficultyMenu = function () {
+        $scope.gameState = 1;
+    }
+
+    $scope.newPuzzle = function (difficulty) {
+        // 0 = easy, 1 = medium, 2 = hard
+        if (difficulty == 0) {
+            $http({
+                method: 'GET',
+                url: 'http://localhost:3000/checkBoard'
+            }).then(function successCB(response) {
+                $scope.gameState = 2;
+                $scope.drawNewBoard(response.data);
+            }, function errorCB (error) {
+                console.log(error);
+            })
+        }
+
+    }
+
+    $scope.drawNewBoard = function drawNewBoard (data) {
+        $scope.board = data.board;
+        console.log(data);
+        for (let row = 0; row < $scope.board.length; row++) {
+            let rowID = 'row' + row;
+            $('table.sudoku').append("<tr id='" + rowID + "'></tr>");
+
+            for (let col = 0; col < $scope.board[0].length; col++) {
+                let cellID = row + "_" + col;
+
+                if ($scope.board[row][col] == null) {
+                    $('tr#' +rowID).append("<td id='" + cellID + "'><input type='text'></tr>");
+                } else {
+                    $('tr#' +rowID).append("<td id='" + cellID + "'>" + $scope.board[row][col] + "</tr>");
+                }
+            }
+        }
+
+        //return(submitBoard())
+    }
+
+});
+
+/*
 $(document).ready(function () {
     // Global Variables
-    var gameState = 0; // 0 = Menu, 1 = Solver
 
     var board = []
     let url = 'http://localhost:3000/checkBoard';
@@ -13,35 +65,9 @@ $(document).ready(function () {
         data: null,
         dataType: 'json'
     })
-
-
-
-
 });
-//
+*/
 
-
-
-function drawNewBoard (data) {
-    board = data.board;
-    console.log(data);
-    for (let row = 0; row < board.length; row++) {
-        let rowID = 'row' + row;
-        $('table.sudoku').append("<tr id='" + rowID + "'></tr>");
-
-        for (let col = 0; col < board[0].length; col++) {
-            let cellID = row + "_" + col;
-
-            if (board[row][col] == null) {
-                $('tr#' +rowID).append("<td id='" + cellID + "'><input type='text'></tr>");
-            } else {
-                $('tr#' +rowID).append("<td id='" + cellID + "'>" + board[row][col] + "</tr>");
-            }
-        }
-    }
-
-    //return(submitBoard())
-}
 
 
 

@@ -1,0 +1,14 @@
+{
+    "board":[
+        [null, null, 7, 6, 5, null, null, 3, null],
+        [null, null, 5, null, 3, 9, 4, null, null],
+        [3, 1, null, 2, null, null, null, 8, 5],
+        [7, 6, null, null, null, null, null, null, null],
+        [2, null, null, null, null, null, null, null, 1],
+        [null, null, null, null, null, null, null, 6, 4],
+        [9, 5, null, null, null, 3, null, 7, 8],
+        [null, null, 2, 5, 6, null, 3, null, null],
+        [null, 7, null, null, 1, 8, 2, null, null]
+    ]
+
+}

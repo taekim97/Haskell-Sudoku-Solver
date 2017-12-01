@@ -40,7 +40,7 @@ instance FromJSON Board where
               <*> v .:? "valid"
 
 jsonFile :: FilePath
-jsonFile = "sampleBoard.json"
+jsonFile = "boards/easy/1.json"
 
 getJSON :: IO B.ByteString
 getJSON = B.readFile jsonFile
