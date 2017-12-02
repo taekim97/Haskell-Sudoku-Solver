@@ -7,6 +7,7 @@ import           Yesod
 import           Data.Text (Text)
 import           Data.Aeson
 import           qualified Data.ByteString.Lazy as B
+import Debug.Trace
 
 data HelloWorld = HelloWorld
 data Board = Board
@@ -21,7 +22,6 @@ mkYesod "HelloWorld" [parseRoutes|
 / HomeR GET
 /newBoard BoardR GET
 /checkBoard CheckR GET
-
 |]
 
 instance Yesod HelloWorld
@@ -149,6 +149,57 @@ checkCell b v r rl c cl =
             else
                 checkCell b (take (n - 1) v ++ [1] ++ drop n v) r rl c (cl + 1)
         Nothing -> checkCell b v r rl c (cl + 1)
+
+-- solves the board, using a dfs
+-- for each entry
+-- if it has a value, go to the next entry
+-- if it is nothing, try every value, from 1 to 9
+-- if one of these values works, commit to it and go
+
+solveBoard :: [[Maybe Int]]-> Int -> Int -> Board
+solveBoard board 9 0 = Board board (Just True)
+solveBoard board row 9 =  solveBoard board (row+1) 0
+solveBoard board row col | not $ isValid board = error "passed in invalid board"
+solveBoard board row col | isValid board =
+
+     case board!!row!!col of
+        Just n -> solveBoard board row (col+1)
+        Nothing ->
+
+            case setValue board row col 1 of
+                [[]] -> Board board (Just False)
+                b -> Board b (Just True)
+
+
+
+
+--tries different values from 1 to 9
+-- chooses the first one that solves the entire board lol
+setValue :: [[Maybe Int]] -> Int -> Int -> Int -> [[Maybe Int]]
+setValue board row col 10 = [[]]
+setValue board row col val =
+    let  rowToAdd = board!!row in
+
+        let r = (take col rowToAdd ++ [Just val] ++ drop (col+1) rowToAdd) in
+        let b = (take row board ++ [r] ++ drop (row+1) board) in
+
+
+        if((isValid b)) then
+
+            case solveBoard b row col of
+                Board newB (Just True) -> newB
+                Board _ (Just False) -> setValue board row col (val+1)
+        else
+            setValue board row col (val+1)
+
+
+
+
+
+
+
+
+
 
 
 main :: IO ()
