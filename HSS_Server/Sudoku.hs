@@ -7,8 +7,9 @@ module Sudoku
 , checkCells
 , solveBoard
 , emptyBoard
-, isValid 
+, isValid
 ) where
+
 
 data Board = Board
     { board :: [[Maybe Int]],
@@ -112,7 +113,7 @@ solveBoard (Board b t) =
 boardSolver :: [[Maybe Int]]-> Int -> Int -> Board
 boardSolver board 9 _ = Board board (Just True)
 boardSolver board row 9 =  boardSolver board (row+1) 0
-boardSolver board row col | not $ isValid board = emptyBoard
+boardSolver board row col | not $ isValid board = Board board (Just False)
 boardSolver board row col | isValid board =
 
      case board!!row!!col of

@@ -13,12 +13,6 @@ import Sudoku
 
 data HelloWorld = HelloWorld
 
-
---data Board = Board
---    { board :: [[Maybe Int]],
---      valid :: Maybe Bool
---    } deriving (Show)
-
 mkYesod "HelloWorld" [parseRoutes|
 / HomeR GET
 /newBoard BoardR GET
