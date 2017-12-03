@@ -77,7 +77,7 @@ function submitBoard(){
     //once done, pass to get request call back
     //if successful, then toast "Correct!" or similar
 
-    sudokuEntries = {'board':[]};
+    sudokuEntries = {'board':[], 'valid': false};
     board = []
 
     for (let row = 0; row < 9; row++) {
@@ -106,7 +106,6 @@ function submitBoard(){
     }
 
     sudokuEntries['board'] = board
-
 
 }
 

@@ -18,10 +18,12 @@ data Board = Board
 emptyBoard :: Board
 emptyBoard = Board [[Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing],[Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing],[Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing],[Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing],[Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing],[Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing],[Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing],[Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing],[Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing]] (Just True)
 
+
 mkYesod "HelloWorld" [parseRoutes|
 / HomeR GET
 /newBoard BoardR GET
 /checkBoard CheckR GET
+/solveBoard SolveBoardR POST
 |]
 
 instance Yesod HelloWorld
@@ -60,6 +62,18 @@ getBoardR = do
     case d of
         Left _ -> returnJson $ emptyBoard
         Right ps -> returnJson $ ps
+
+
+-- Returns this board solved, if unsolvale it returns the original board
+postSolveBoardR :: Handler Value
+postSolveBoardR = do
+    addHeader "Access-Control-Allow-Origin" "*"
+    --d <- liftIO ( (eitherDecode <$> getJSON) :: IO (Either String Board))
+    board <- requireJsonBody :: Handler Board
+    returnJson $ solveBoard $ board
+
+
+
 
 -- Checks if board is valid
 getCheckR :: Handler Value
@@ -151,7 +165,6 @@ checkCell b v r rl c cl =
         Nothing -> checkCell b v r rl c (cl + 1)
 
 
-
 --solves the board, throws error when the board passed in is invalid
 solveBoard :: Board -> Board
 solveBoard (Board b t) =
@@ -159,13 +172,13 @@ solveBoard (Board b t) =
         if(isValid newB) then
             (Board newB t2)
         else
-            error "boardSolver failed!"
+            (Board b (Just False))
 
 
 boardSolver :: [[Maybe Int]]-> Int -> Int -> Board
 boardSolver board 9 _ = Board board (Just True)
 boardSolver board row 9 =  boardSolver board (row+1) 0
-boardSolver board row col | not $ isValid board = error "passed in invalid board to boardSolver"
+boardSolver board row col | not $ isValid board = emptyBoard
 boardSolver board row col | isValid board =
 
      case board!!row!!col of
