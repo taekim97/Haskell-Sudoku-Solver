@@ -13,6 +13,8 @@ import           Sudoku
 import           System.Random (randomRIO)
 import           System.IO.Unsafe
 
+import Yesod.Helpers.Static
+
 data HelloWorld = HelloWorld
 
 mkYesod "HelloWorld" [parseRoutes|
@@ -55,7 +57,11 @@ getJSON filePath = B.readFile $ jsonFile filePath
 
 -- Welcome Page
 getHomeR :: Handler Html
-getHomeR = defaultLayout [whamlet|Hello World!|]
+getHomeR = do
+    --app <- getYesod
+    --let indexPath = getRootDir app <$> "index.html"
+    --sendFile "text/html" indexPath
+    getHomeR = defaultLayout [whamlet|Hello World!|]
 
 
 
@@ -127,4 +133,5 @@ optionsCheckR = do
 
 
 main :: IO ()
+
 main = warp 3000 HelloWorld

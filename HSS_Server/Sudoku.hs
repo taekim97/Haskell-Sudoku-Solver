@@ -100,7 +100,7 @@ checkCell b v r rl c cl =
         Nothing -> checkCell b v r rl c (cl + 1)
 
 
---solves the board, throws error when the board passed in is invalid
+--Solves the board, returns original board if the board is unsolvable
 solveBoard :: Board -> Board
 solveBoard (Board b t) =
     let (Board newB t2) = boardSolver b 0 0 in
@@ -131,7 +131,7 @@ setValue board row col val =
         let r = (take col rowToAdd ++ [Just val] ++ drop (col+1) rowToAdd) in
         let b = (take row board ++ [r] ++ drop (row+1) board) in
 
-        if((isValid b)) then
+        if(isValid b) then
             case boardSolver b row col of
                 Board newB (Just True) -> newB
                 Board _ (Just False) -> setValue board row col (val+1)
