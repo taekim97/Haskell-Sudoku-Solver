@@ -15,14 +15,14 @@ build-type:          Simple
 extra-source-files:  ChangeLog.md, README.md
 cabal-version:       >=1.10
 
-library
-  build-depends:      base
+
 
 executable Haskell-Sudoku-Solver
   main-is:              server.hs
   hs-source-dirs:       HSS_Server
+  other-modules:        Sudoku
   -- other-extensions:
-  build-depends:       base >=4.7 && <4.11, yesod, text, random, aeson, bytestring
+  build-depends:        base >=4.7 && <4.11, yesod, static, text, random, aeson, bytestring
   -- extra-deps:          ./HSS_Server/sudoku.hs
   -- hs-source-dirs:
   default-language:    Haskell2010
