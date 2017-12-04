@@ -18,7 +18,7 @@ data HelloWorld = HelloWorld
 mkYesod "HelloWorld" [parseRoutes|
 / HomeR GET
 /newBoard BoardR POST OPTIONS
-/checkBoard CheckR POST
+/checkBoard CheckR POST OPTIONS
 /solveBoard SolveBoardR POST OPTIONS
 |]
 
@@ -100,7 +100,6 @@ optionsBoardR = do
 postSolveBoardR :: Handler Value
 postSolveBoardR = do
     addHeader "Access-Control-Allow-Origin" "*"
-    --d <- liftIO ( (eitherDecode <$> getJSON) :: IO (Either String Board))
     board <- requireJsonBody :: Handler Board
     returnJson $ solveBoard $ board
 
@@ -119,10 +118,12 @@ postCheckR = do
     board <- requireJsonBody :: Handler Board
     let Board b v = board in returnJson $ Board b $ Just $ isValid b
 
-
-
-
-
+optionsCheckR :: Handler RepPlain
+optionsCheckR = do
+    addHeader "Access-Control-Allow-Origin" "*"
+    addHeader "Access-Control-Allow-Methods" "PUT, OPTIONS"
+    addHeader "Access-Control-Allow-Headers" "Origin, X-Requested-With, Content-Type, Accept"
+    return $ RepPlain $ toContent ("" :: Text)
 
 
 main :: IO ()

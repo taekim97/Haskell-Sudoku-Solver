@@ -7,12 +7,31 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 body{
-    background-image: url("transparentTexture.png");
-
+    //background-image: url("transparentTexture.png");
+    background-color: #259888;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
 }
 
-.wrapper {
-    width: 100%;
+button {
+    background-color: white;
+    text-align: center;
+    width: 50px;
+    height: 25px;
+    border-radius: 10px;
+}
+
+section.left {
+    float: left;
+    background-color: #e9edee;
+    width: 200px;
+    height: 100%;
+    padding: 10px;
+}
+section.right {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-align: center;
 }
 
 .sudoku {
@@ -22,7 +41,10 @@ body{
 /* Second Method */
 table.sudoku {
     border-collapse: collapse;
-    font-family: Calibri, sans-serif;
+    font-family: 'Raleway', sans-serif;
+    background-color: white;
+    font-size: 22px;
+    text-align: center
 }
 
 .sudoku tr:first-child {
@@ -39,24 +61,22 @@ table.sudoku {
 .sudoku td:nth-of-type(3n) {
     border-right: solid medium;
 }
-.sudoku td  {
+.sudoku td{
     border: solid thin;
-    height: 1.4em;
-    width: 1.4em;
-    text-align: center;
-    padding: 0;
 }
 
-.sudoku input {
-    height:100%;
-    width:100%
+.sudoku td, .sudoku input, .sudoku span{
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    margin: 0;
 }
 
 /* Menu CSS */
 
-.menu {
-    height: 400px;
-    width : 250px;
+.menu, .play, .solver{
+    height: 100px;
+    width : 288px;
 
 
     margin: 0 auto;
@@ -64,15 +84,19 @@ table.sudoku {
 
 .menuLogo {
     text-align: center;
-    height:75px;
+    height:50px;
     width: 150px;
     margin: 0 auto;
     padding: 30px 0;
     font-size: 45px;
+    font-weight: 900;
+    text-decoration: underline;
+    color: white;
 }
 .menuButton {
     text-align: center;
     width: 75px;
     display: block;
-    margin: 0 auto;
+    margin: 10px auto;
+
 }

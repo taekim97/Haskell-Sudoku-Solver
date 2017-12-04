@@ -4,6 +4,7 @@ var app = angular.module("sudokuApp", []);
 app.controller("mainCtrl", function($scope, $http) {
     $scope.gameState = 0;
     $scope.board = [];
+    $scope.originalBoard = [];
 
     $scope.difficultyMenu = function () {
         $scope.gameState = 1;
@@ -16,7 +17,7 @@ app.controller("mainCtrl", function($scope, $http) {
 
     $scope.newPuzzle = function (difficulty) {
         // 0 = easy, 1 = medium, 2 = hard
-        if (difficulty == 0) {
+        if (difficulty > -1 && difficulty < 3) {
             $http({
                 method: 'POST',
                 url: 'http://localhost:3000/newBoard',
@@ -26,6 +27,8 @@ app.controller("mainCtrl", function($scope, $http) {
             }).then(function successCB(response) {
                 $scope.gameState = 2;
                 $scope.board = response.data.board;
+                $scope.originalBoard = JSON.parse(JSON.stringify(response.data.board.slice()));;
+                console.log($scope.originalBoard);
 
             }, function errorCB (error) {
                 console.log(error);
@@ -43,6 +46,8 @@ app.controller("mainCtrl", function($scope, $http) {
 
     $scope.backState = function () {
         $scope.gameState = 0;
+        $scope.board = [];
+        $scope.originalBoard = [];
     }
 
     $scope.solve = function () {
@@ -65,6 +70,7 @@ app.controller("mainCtrl", function($scope, $http) {
     }
 
     $scope.validate = function () {
+        console.log($scope.originalBoard);
         $http({
             method: 'POST',
             url: 'http://localhost:3000/checkBoard',
@@ -73,7 +79,12 @@ app.controller("mainCtrl", function($scope, $http) {
             }
         }).then(function successCB(response) {
 
-            $scope.board = response.data.board;
+            if (response.data.valid) {
+                $scope.board = response.data.board;
+            }
+
+            console.log("after");
+            console.log($scope.originalBoard);
             alert(response.data.valid);
 
             console.log("Success")
@@ -85,47 +96,3 @@ app.controller("mainCtrl", function($scope, $http) {
     }
 
 });
-
-
-
-function submitBoard(){
-    //extract numbers from the table
-    //if not a number, stop, alert
-    //once done, pass to get request call back
-    //if successful, then toast "Correct!" or similar
-
-    sudokuEntries = {'board':[], 'valid': false};
-    board = []
-
-    for (let row = 0; row < 9; row++) {
-        entryRow = []
-        for (let col = 0; col < 9; col++) {
-            let cellId = row + "_" + col;
-            let entry = $("tr #" + cellId);
-
-            if(entry.children().length > 0 ){
-                let inputVal = $("tr #" + cellId + " input").val();
-                if(inputVal === ""){
-                    //alert("please fill out the board");
-                } else if (!(/^\d+$/.test(inputVal)) ){
-                    alert("Only numbers please :)");
-                    return;
-                } else {
-                    entryRow.push(inputVal);
-                }
-
-            } else {
-                entryRow.push(entry.text());
-            }
-        }
-
-        board.push(entryRow);
-    }
-
-    sudokuEntries['board'] = board
-
-}
-
-function submissionResults(board){
-    //if true, then alert "Congrats!", otherwise, alert "try again!"
-}
