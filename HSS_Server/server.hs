@@ -8,19 +8,24 @@ import           Data.Text (Text)
 import           Data.Aeson
 import           qualified Data.ByteString.Lazy as B
 import Debug.Trace
-
+import System.Random
 import Sudoku
+import System.Random (randomRIO)
+import System.IO.Unsafe
 
 data HelloWorld = HelloWorld
 
 mkYesod "HelloWorld" [parseRoutes|
 / HomeR GET
-/newBoard BoardR GET
+/newBoard BoardR POST
 /checkBoard CheckR GET
 /solveBoard SolveBoardR POST
 |]
 
 instance Yesod HelloWorld
+
+data Difficulty = Difficulty
+    { difficulty :: Int }  deriving (Show)
 
 
 -- Parsing Functions
@@ -35,11 +40,17 @@ instance FromJSON Board where
         Board <$> v .: "board"
               <*> v .:? "valid"
 
-jsonFile :: FilePath
-jsonFile = "boards/easy/1.json"
 
-getJSON :: IO B.ByteString
-getJSON = B.readFile jsonFile
+instance FromJSON Difficulty where
+  parseJSON (Object v) =
+      Difficulty <$> v .: "difficulty"
+
+
+jsonFile ::  [Char] -> FilePath
+jsonFile s = s
+
+getJSON :: [Char] -> IO B.ByteString
+getJSON filePath = B.readFile $ jsonFile filePath
 
 
 -- Welcome Page
@@ -48,17 +59,37 @@ getHomeR = defaultLayout [whamlet|Hello World!|]
 
 
 -- Generates a new board and returns a JSON representation of the board
-getBoardR :: Handler Value
-getBoardR = do
+-- Generates a new board (easy, medium, or hard) and returns a new JSON representation of that board
+
+getRandNum :: Int
+getRandNum =  unsafePerformIO $ do
+    x <- randomRIO (1,3)
+    return x
+
+chooseBoard :: Difficulty -> [Char]
+chooseBoard (Difficulty d) =
+    if (d == 0) then
+        "boards/easy/" ++ (show getRandNum) ++ ".json"
+    else if (d == 1) then
+        "boards/med/" ++ (show getRandNum) ++ ".json"
+    else if (d == 2) then
+        "boards/hard/" ++ (show getRandNum) ++ ".json"
+    else
+        error "invalid Difficulty"
+
+postBoardR :: Handler Value
+postBoardR = do
     addHeader "Access-Control-Allow-Origin" "*"
-    d <- liftIO ( (eitherDecode <$> getJSON) :: IO (Either String Board))
+    diff <- requireJsonBody :: Handler Difficulty
+
+    d <- liftIO ( (eitherDecode <$> getJSON (chooseBoard diff)) :: IO (Either String Board))
 
     case d of
         Left _ -> returnJson $ emptyBoard
         Right ps -> returnJson $ ps
 
 
--- Returns this board solved, if unsolvale it returns the original board
+-- Returns this board solved, if unsolvable it returns the original board
 postSolveBoardR :: Handler Value
 postSolveBoardR = do
     addHeader "Access-Control-Allow-Origin" "*"
@@ -70,7 +101,7 @@ postSolveBoardR = do
 getCheckR :: Handler Value
 getCheckR = do
     addHeader "Access-Control-Allow-Origin" "*"
-    d <- liftIO ( (eitherDecode <$> getJSON) :: IO (Either String Board))
+    d <- liftIO ( (eitherDecode <$> getJSON "/board/easy/1.json") :: IO (Either String Board))
 
     case d of
         Left _ -> returnJson $ emptyBoard

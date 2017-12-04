@@ -1,0 +1,15 @@
+{
+    "board":[
+        [6, 4, null, null, null, 1, null, 8, null],
+        [null, null, 2, null, null, null, null, null, null],
+        [8, null, 3, 7, null, 4, null, null, null],
+        [null, null, null, 1, null, 2, 7, 9, null],
+        [null, 2, null, null, null, null, null, 5, null],
+        [null, 9, 8, 3, null, 7, null, null, null],
+        [null, null, null, 2, null, 5, 9, null, 8],
+        [null, null, null, null, null, null, 5, null, null],
+        [null, 5, null, 8, null, null, null, 7, 4]
+    ]
+    , "valid":true
+
+}
