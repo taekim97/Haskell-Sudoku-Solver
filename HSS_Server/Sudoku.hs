@@ -113,16 +113,16 @@ solveBoard (Board b t) =
 boardSolver :: [[Maybe Int]]-> Int -> Int -> Board
 boardSolver board 9 _ = Board board (Just True)
 boardSolver board row 9 =  boardSolver board (row+1) 0
-boardSolver board row col | not $ isValid board = Board board (Just False)
-boardSolver board row col | isValid board =
-
-     case board!!row!!col of
-        Just n -> boardSolver board row (col+1)
-        Nothing ->
-            case setValue board row col 1 of
-                [[]] -> Board board (Just False)
-                b -> Board b (Just True)
-
+boardSolver board row col =
+    if isValid board then
+        case board!!row!!col of
+            Just n -> boardSolver board row (col+1)
+            Nothing ->
+                case setValue board row col 1 of
+                    [[]] -> Board board (Just False)
+                    b -> Board b (Just True)
+    else
+        Board board (Just False)
 
 setValue :: [[Maybe Int]] -> Int -> Int -> Int -> [[Maybe Int]]
 setValue board row col 10 = [[]]
