@@ -18,7 +18,7 @@ data HelloWorld = HelloWorld
 mkYesod "HelloWorld" [parseRoutes|
 / HomeR GET
 /newBoard BoardR POST
-/checkBoard CheckR GET
+/checkBoard CheckR POST
 /solveBoard SolveBoardR POST OPTIONS
 |]
 
@@ -59,19 +59,21 @@ getHomeR = defaultLayout [whamlet|Hello World!|]
 
 
 
-getRandNum :: Int
-getRandNum =  unsafePerformIO $ do
-    x <- randomRIO (1,3)
+getRandNum :: IO Int
+getRandNum = do
+    g <- newStdGen
+    let (x,r) = randomR(1,3) g
     return x
 
 chooseBoard :: Difficulty -> [Char]
 chooseBoard (Difficulty d) =
+    let rand = unsafePerformIO $ getRandNum in
     if (d == 0) then
-        "boards/easy/" ++ (show getRandNum) ++ ".json"
+        "boards/easy/" ++ (show rand) ++ ".json"
     else if (d == 1) then
-        "boards/med/" ++ (show getRandNum) ++ ".json"
+        "boards/med/" ++ (show rand) ++ ".json"
     else if (d == 2) then
-        "boards/hard/" ++ (show getRandNum) ++ ".json"
+        "boards/hard/" ++ (show rand) ++ ".json"
     else
         error "invalid Difficulty"
 
