@@ -112,12 +112,12 @@
   (major1) == 1 && (major2) <  24 || \
   (major1) == 1 && (major2) == 24 && (minor) <= 0)
 
-/* tool pkg-config-0.29.2 */
-#define TOOL_VERSION_pkg_config "0.29.2"
+/* tool pkg-config-0.29.1 */
+#define TOOL_VERSION_pkg_config "0.29.1"
 #define MIN_TOOL_VERSION_pkg_config(major1,major2,minor) (\
   (major1) <  0 || \
   (major1) == 0 && (major2) <  29 || \
-  (major1) == 0 && (major2) == 29 && (minor) <= 2)
+  (major1) == 0 && (major2) == 29 && (minor) <= 1)
 
 #define CURRENT_COMPONENT_ID "Haskell-Sudoku-Solver-0.1.0.0-8ZI9BOAxc5HwAXCVEWmwE"
 

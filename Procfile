@@ -1,2 +1,2 @@
-web: ./dist/build/heroku-haskell/heroku-haskell
+web: Haskell-Sudoku-Solver
 
