@@ -1,8 +1,5 @@
-particlesJS.load('particles-js', 'particles.json', function() {
-  console.log('callback - particles.js config loaded');
-});
-
 var app = angular.module("sudokuApp", []);
+
 
 app.controller("mainCtrl", function($scope, $http) {
     $scope.gameState = 0;
@@ -10,6 +7,11 @@ app.controller("mainCtrl", function($scope, $http) {
 
     $scope.difficultyMenu = function () {
         $scope.gameState = 1;
+    }
+
+    $scope.newSolver = function () {
+        $scope.gameState = 3;
+        $scope.newPuzzle(-1); //Empty Board
     }
 
     $scope.newPuzzle = function (difficulty) {
@@ -20,54 +22,66 @@ app.controller("mainCtrl", function($scope, $http) {
                 url: 'http://localhost:3000/checkBoard'
             }).then(function successCB(response) {
                 $scope.gameState = 2;
-                $scope.drawNewBoard(response.data);
+                $scope.board = response.data.board;
+
             }, function errorCB (error) {
                 console.log(error);
             })
-        }
+        } else {
+            $scope.board = new Array(9);
+            for (let row = 0; row < 9; row++) {
+                let tempAry = new Array(9);
+                $scope.board[row] = tempAry;
 
-    }
-
-    $scope.drawNewBoard = function drawNewBoard (data) {
-        $scope.board = data.board;
-        console.log(data);
-        for (let row = 0; row < $scope.board.length; row++) {
-            let rowID = 'row' + row;
-            $('table.sudoku').append("<tr id='" + rowID + "'></tr>");
-
-            for (let col = 0; col < $scope.board[0].length; col++) {
-                let cellID = row + "_" + col;
-
-                if ($scope.board[row][col] == null) {
-                    $('tr#' +rowID).append("<td id='" + cellID + "'><input type='text'></tr>");
-                } else {
-                    $('tr#' +rowID).append("<td id='" + cellID + "'>" + $scope.board[row][col] + "</tr>");
-                }
             }
         }
 
-        //return(submitBoard())
+    }
+
+    $scope.backState = function () {
+        $scope.gameState = 0;
+    }
+
+    $scope.solve = function () {
+
+        $http({
+            method: 'POST',
+            url: 'http://localhost:3000/solveBoard',
+            data: {
+                board: $scope.board
+            }
+        }).then(function successCB(response) {
+
+            $scope.board = response.data.board;
+
+            console.log("Success")
+
+        }, function errorCB (error) {
+            console.log(error);
+        })
+    }
+
+    $scope.validate = function () {
+        $http({
+            method: 'POST',
+            url: 'http://localhost:3000/checkBoard',
+            data: {
+                board: $scope.board
+            }
+        }).then(function successCB(response) {
+
+            $scope.board = response.data.board;
+            alert(response.data.valid);
+
+            console.log("Success")
+
+        }, function errorCB (error) {
+            console.log(error);
+        })
+
     }
 
 });
-
-/*
-$(document).ready(function () {
-    // Global Variables
-
-    var board = []
-    let url = 'http://localhost:3000/checkBoard';
-
-
-    $.ajax({
-        url: url,
-        success: drawNewBoard,
-        data: null,
-        dataType: 'json'
-    })
-});
-*/
-
 
 
 

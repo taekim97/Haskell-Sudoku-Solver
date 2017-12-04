@@ -5,18 +5,19 @@
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
-        <script src="particles.min.js"></script>
         <script src="script.js"></script>
 
 
     </head>
 
     <body ng-app="sudokuApp" ng-controller="mainCtrl" id="particles-js">
+        <button ng-click="backState()" type="button">Back</button>
 
         <!-- Welcome Page -->
         <div class="menu" ng-show="gameState == 0">
             <div class="menuLogo">Sudoku</div>
-            <button ng-click="difficultyMenu()" class="menuButton" type="button">Play!</button>
+            <button ng-click="difficultyMenu()" class="menuButton" type="button">Play</button>
+            <button ng-click="newSolver()" class="menuButton" type="button">Solver</button>
         </div>
 
         <!-- Difficulty Menu -->
@@ -27,10 +28,29 @@
             <button ng-click="newPuzzle(2)" class="menuButton" type="button">Hard</button>
         </div>
 
-
-        <div class="solver" ng-show="gameState == 2">
+        <div class="play" ng-show="gameState == 2">
             <table class="sudoku" id="sudoku">
+                <tr ng-repeat="y in [0,1,2,3,4,5,6,7,8]">
+                    <td ng-repeat="x in [0,1,2,3,4,5,6,7,8]">
+                        <input ng-model="board[y][x]" ng-if="!board[y][x]" type='number'>
+                        <span ng-model="board[y][x]" ng-if="board[y][x]">{{board[y][x]}}</span>
+                    </td>
+                </tr>
             </table>
+
+            <button ng-click="validate()" class="menuButton" type="button">Check</button>
+        </div>
+
+        <div class="solve" ng-show="gameState == 3">
+            <table class="sudoku" id="sudoku">
+                <tr ng-repeat="y in [0,1,2,3,4,5,6,7,8]">
+                    <td ng-repeat="x in [0,1,2,3,4,5,6,7,8]">
+                        <input ng-model="board[y][x]" type='number'>
+                    </td>
+                </tr>
+            </table>
+
+            <button ng-click="solve()" class="menuButton" type="button">Solve</button>
         </div>
         <input type="button" value="submit" onclick="submitBoard();" />
 

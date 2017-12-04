@@ -7,11 +7,11 @@ import           Yesod
 import           Data.Text (Text)
 import           Data.Aeson
 import           qualified Data.ByteString.Lazy as B
-import Debug.Trace
-import System.Random
-import Sudoku
-import System.Random (randomRIO)
-import System.IO.Unsafe
+import           Debug.Trace
+import           System.Random
+import           Sudoku
+import           System.Random (randomRIO)
+import           System.IO.Unsafe
 
 data HelloWorld = HelloWorld
 
@@ -19,7 +19,7 @@ mkYesod "HelloWorld" [parseRoutes|
 / HomeR GET
 /newBoard BoardR POST
 /checkBoard CheckR GET
-/solveBoard SolveBoardR POST
+/solveBoard SolveBoardR POST OPTIONS
 |]
 
 instance Yesod HelloWorld
@@ -58,7 +58,7 @@ getHomeR :: Handler Html
 getHomeR = defaultLayout [whamlet|Hello World!|]
 
 
--- Generates a new board and returns a JSON representation of the board
+
 -- Generates a new board (easy, medium, or hard) and returns a new JSON representation of that board
 
 getRandNum :: Int
@@ -96,6 +96,13 @@ postSolveBoardR = do
     --d <- liftIO ( (eitherDecode <$> getJSON) :: IO (Either String Board))
     board <- requireJsonBody :: Handler Board
     returnJson $ solveBoard $ board
+
+optionsSolveBoardR :: Handler RepPlain
+optionsSolveBoardR = do
+    addHeader "Access-Control-Allow-Origin" "*"
+    addHeader "Access-Control-Allow-Methods" "PUT, OPTIONS"
+    addHeader "Access-Control-Allow-Headers" "Origin, X-Requested-With, Content-Type, Accept"
+    return $ RepPlain $ toContent ("" :: Text)
 
 -- Checks if board is valid
 getCheckR :: Handler Value
