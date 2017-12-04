@@ -13,7 +13,6 @@ import           Sudoku
 import           System.Random (randomRIO)
 import           System.IO.Unsafe
 
-import Yesod.Helpers.Static
 
 data HelloWorld = HelloWorld
 
@@ -57,11 +56,11 @@ getJSON filePath = B.readFile $ jsonFile filePath
 
 -- Welcome Page
 getHomeR :: Handler Html
-getHomeR = do
+getHomeR = defaultLayout [whamlet|Hello World!|]
+
     --app <- getYesod
     --let indexPath = getRootDir app <$> "index.html"
     --sendFile "text/html" indexPath
-    getHomeR = defaultLayout [whamlet|Hello World!|]
 
 
 
