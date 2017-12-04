@@ -7,8 +7,6 @@ import           Yesod
 import           Data.Text (Text)
 import           Data.Aeson
 import           qualified Data.ByteString.Lazy as B
-import           Debug.Trace
-import           System.Random
 import           Sudoku
 import           System.Random (randomRIO)
 import           System.IO.Unsafe
