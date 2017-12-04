@@ -19,3 +19,10 @@ Preprocessing library yesod-form-1.4.16...
 [16 of 22] Compiling Yesod.Form.Functions ( Yesod/Form/Functions.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Yesod/Form/Functions.o )
 [17 of 22] Compiling Yesod.Form.Fields ( Yesod/Form/Fields.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Yesod/Form/Fields.o )
 [18 of 22] Compiling Yesod.Form.MassInput ( Yesod/Form/MassInput.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Yesod/Form/MassInput.o )
+[19 of 22] Compiling Yesod.Form.Bootstrap3 ( Yesod/Form/Bootstrap3.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Yesod/Form/Bootstrap3.o )
+[20 of 22] Compiling Yesod.Form       ( Yesod/Form.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Yesod/Form.o )
+[21 of 22] Compiling Yesod.Form.Jquery ( Yesod/Form/Jquery.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Yesod/Form/Jquery.o )
+[22 of 22] Compiling Yesod.Form.Nic   ( Yesod/Form/Nic.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/Yesod/Form/Nic.o )
+Installing library in
+/Users/michaelanderjaska/.stack/snapshots/x86_64-osx/lts-9.17/8.0.2/lib/x86_64-osx-ghc-8.0.2/yesod-form-1.4.16-5FoIKRII350BHhcaVSlLKo
+Registering yesod-form-1.4.16...

@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/Users/michaelanderjaska/Haskell-Sudoku-Solver/.stack-work/install/x86_64-osx/lts-9.17/8.0.2/bin"
-libdir     = "/Users/michaelanderjaska/Haskell-Sudoku-Solver/.stack-work/install/x86_64-osx/lts-9.17/8.0.2/lib/x86_64-osx-ghc-8.0.2/Haskell-Sudoku-Solver-0.1.0.0"
+libdir     = "/Users/michaelanderjaska/Haskell-Sudoku-Solver/.stack-work/install/x86_64-osx/lts-9.17/8.0.2/lib/x86_64-osx-ghc-8.0.2/Haskell-Sudoku-Solver-0.1.0.0-8ZI9BOAxc5HwAXCVEWmwE"
 dynlibdir  = "/Users/michaelanderjaska/Haskell-Sudoku-Solver/.stack-work/install/x86_64-osx/lts-9.17/8.0.2/lib/x86_64-osx-ghc-8.0.2"
 datadir    = "/Users/michaelanderjaska/Haskell-Sudoku-Solver/.stack-work/install/x86_64-osx/lts-9.17/8.0.2/share/x86_64-osx-ghc-8.0.2/Haskell-Sudoku-Solver-0.1.0.0"
 libexecdir = "/Users/michaelanderjaska/Haskell-Sudoku-Solver/.stack-work/install/x86_64-osx/lts-9.17/8.0.2/libexec"
