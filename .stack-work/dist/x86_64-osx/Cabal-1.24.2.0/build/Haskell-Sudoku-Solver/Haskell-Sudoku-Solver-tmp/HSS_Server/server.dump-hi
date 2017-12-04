@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-12-04 20:30:13.604543 UTC
+2017-12-04 21:04:00.199925 UTC
 
 interface main@main:Main [orphan module] [family instance module] 8002
-  interface hash: ce52c846110c7b6a2e7aeadc2ce9c04c
+  interface hash: 176e2f910eb5332c387f1950be64907f
   ABI hash: aba64bf1fb55774b73ea79b4cf68e94f
   export-list hash: 3db06dee88b9e0ae41b2a71ca4abbe56
   orphan hash: f60932f39b1fc5385e97e327fdaad45f
@@ -230,6 +230,7 @@ import  -/  aeson-1.1.2.0@aeson-1.1.2.0-7ssY6fy1GxZGXxTPcOtf2k:Data.Aeson 1af005
 import  -/  aeson-1.1.2.0@aeson-1.1.2.0-7ssY6fy1GxZGXxTPcOtf2k:Data.Aeson.Types.FromJSON f51fffb1f8daae31daf33b152fc89c41
 import  -/  aeson-1.1.2.0@aeson-1.1.2.0-7ssY6fy1GxZGXxTPcOtf2k:Data.Aeson.Types.Internal 4c7adfaf9946e7eb59b1a47b47e68246
 import  -/  aeson-1.1.2.0@aeson-1.1.2.0-7ssY6fy1GxZGXxTPcOtf2k:Data.Aeson.Types.ToJSON d6ae344f2a743c9940980d0869569ad4
+import  -/  base-4.9.1.0:Control.Applicative 32430a90492e727f4bd80db71c28600c
 import  -/  base-4.9.1.0:Control.Monad.IO.Class 1a4384f66ee999caf5366398edb6ca7b
 import  -/  base-4.9.1.0:Data.Either 20b09ef8d0a5b74fdec011c40c1587f5
 import  -/  base-4.9.1.0:Data.Functor 5ab1dc703df5b482e77efb697833ca3c

@@ -10,6 +10,7 @@ import           qualified Data.ByteString.Lazy as B
 import           Sudoku
 import           System.Random (randomR, newStdGen)
 import           System.IO.Unsafe
+import           Control.Applicative
 
 
 data HelloWorld = HelloWorld
