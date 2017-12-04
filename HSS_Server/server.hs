@@ -17,7 +17,7 @@ data HelloWorld = HelloWorld
 
 mkYesod "HelloWorld" [parseRoutes|
 / HomeR GET
-/newBoard BoardR POST
+/newBoard BoardR POST OPTIONS
 /checkBoard CheckR POST
 /solveBoard SolveBoardR POST OPTIONS
 |]
@@ -87,6 +87,13 @@ postBoardR = do
     case d of
         Left _ -> returnJson $ emptyBoard
         Right ps -> returnJson $ ps
+
+optionsBoardR :: Handler RepPlain
+optionsBoardR = do
+    addHeader "Access-Control-Allow-Origin" "*"
+    addHeader "Access-Control-Allow-Methods" "PUT, OPTIONS"
+    addHeader "Access-Control-Allow-Headers" "Origin, X-Requested-With, Content-Type, Accept"
+    return $ RepPlain $ toContent ("" :: Text)
 
 
 -- Returns this board solved, if unsolvable it returns the original board

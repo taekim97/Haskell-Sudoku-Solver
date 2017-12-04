@@ -18,8 +18,11 @@ app.controller("mainCtrl", function($scope, $http) {
         // 0 = easy, 1 = medium, 2 = hard
         if (difficulty == 0) {
             $http({
-                method: 'GET',
-                url: 'http://localhost:3000/checkBoard'
+                method: 'POST',
+                url: 'http://localhost:3000/newBoard',
+                data: JSON.stringify({
+                    difficulty: difficulty
+                })
             }).then(function successCB(response) {
                 $scope.gameState = 2;
                 $scope.board = response.data.board;
