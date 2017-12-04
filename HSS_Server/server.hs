@@ -8,18 +8,26 @@ import           Data.Text (Text)
 import           Data.Aeson
 import           qualified Data.ByteString.Lazy as B
 import           Sudoku
-import           System.Random (randomRIO)
+import           System.Random
 import           System.IO.Unsafe
 
 
+
+staticFiles "../HSS_Site"
+
 data HelloWorld = HelloWorld
+    { getStatic :: Static
+    }
+
 
 mkYesod "HelloWorld" [parseRoutes|
 / HomeR GET
+/static StaticR Static getStatic
 /newBoard BoardR POST OPTIONS
 /checkBoard CheckR POST OPTIONS
 /solveBoard SolveBoardR POST OPTIONS
 |]
+
 
 instance Yesod HelloWorld
 
@@ -52,10 +60,11 @@ getJSON :: [Char] -> IO B.ByteString
 getJSON filePath = B.readFile $ jsonFile filePath
 
 
+
+
 -- Welcome Page
 getHomeR :: Handler Html
 getHomeR = defaultLayout [whamlet|Hello World!|]
-
     --app <- getYesod
     --let indexPath = getRootDir app <$> "index.html"
     --sendFile "text/html" indexPath
@@ -130,5 +139,6 @@ optionsCheckR = do
 
 
 main :: IO ()
-
-main = warp 3000 HelloWorld
+main = do
+    static@(Static settings) <- static "../HSS_Site"
+    warp 3000 $ HelloWorld static
