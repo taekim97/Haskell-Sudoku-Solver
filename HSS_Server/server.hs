@@ -8,7 +8,7 @@ import           Data.Text (Text)
 import           Data.Aeson
 import           qualified Data.ByteString.Lazy as B
 import           Sudoku
-import           System.Random (randomRIO)
+import           System.Random (randomR, newStdGen)
 import           System.IO.Unsafe
 
 
@@ -65,7 +65,7 @@ getHomeR = defaultLayout [whamlet|Hello World!|]
 getRandNum :: IO Int
 getRandNum = do
     g <- newStdGen
-    let (x,r) = randomR(1,3) g
+    let (x,r) = randomR(1,6) g
     return x
 
 chooseBoard :: Difficulty -> [Char]

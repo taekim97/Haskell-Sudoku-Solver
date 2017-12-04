@@ -17,12 +17,15 @@ cabal-version:       >=1.10
 
 library
   build-depends:      base
+  hs-source-dirs:     HSS_Server
+  exposed-modules:    Sudoku
 
 executable Haskell-Sudoku-Solver
-  main-is:              server.hs
   hs-source-dirs:       HSS_Server
-  -- other-extensions:
+  main-is:              server.hs
+
   build-depends:       base >=4.7 && <4.11, yesod, text, random, aeson, bytestring
+  other-modules:       Sudoku
   -- extra-deps:          ./HSS_Server/sudoku.hs
   -- hs-source-dirs:
   default-language:    Haskell2010
