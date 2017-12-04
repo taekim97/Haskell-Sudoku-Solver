@@ -18,7 +18,7 @@ data HelloWorld = HelloWorld
 mkYesod "HelloWorld" [parseRoutes|
 / HomeR GET
 /newBoard BoardR POST
-/checkBoard CheckR GET
+/checkBoard CheckR POST
 /solveBoard SolveBoardR POST
 |]
 
@@ -58,8 +58,6 @@ getHomeR :: Handler Html
 getHomeR = defaultLayout [whamlet|Hello World!|]
 
 
--- Generates a new board and returns a JSON representation of the board
--- Generates a new board (easy, medium, or hard) and returns a new JSON representation of that board
 
 getRandNum :: Int
 getRandNum =  unsafePerformIO $ do
@@ -77,11 +75,11 @@ chooseBoard (Difficulty d) =
     else
         error "invalid Difficulty"
 
+-- Generates a new board (easy, medium, or hard) and returns a new JSON representation of that board
 postBoardR :: Handler Value
 postBoardR = do
     addHeader "Access-Control-Allow-Origin" "*"
     diff <- requireJsonBody :: Handler Difficulty
-
     d <- liftIO ( (eitherDecode <$> getJSON (chooseBoard diff)) :: IO (Either String Board))
 
     case d of
@@ -98,14 +96,14 @@ postSolveBoardR = do
     returnJson $ solveBoard $ board
 
 -- Checks if board is valid
-getCheckR :: Handler Value
-getCheckR = do
+postCheckR :: Handler Value
+postCheckR = do
     addHeader "Access-Control-Allow-Origin" "*"
-    d <- liftIO ( (eitherDecode <$> getJSON "/board/easy/1.json") :: IO (Either String Board))
+    --d <- liftIO ( (eitherDecode <$> getJSON "/board/easy/1.json") :: IO (Either String Board))
+    board <- requireJsonBody :: Handler Board
+    let Board b v = board in returnJson $ Board b $ Just $ isValid b
 
-    case d of
-        Left _ -> returnJson $ emptyBoard
-        Right (Board b v) -> returnJson $ Board b $ Just $ isValid b
+
 
 
 
