@@ -78,11 +78,11 @@ chooseBoard :: Difficulty -> [Char]
 chooseBoard (Difficulty d) =
     let rand = unsafePerformIO $ getRandNum in
     if (d == 0) then
-        "boards/easy/" ++ (show rand) ++ ".json"
+        "/boards/easy/" ++ (show rand) ++ ".json"
     else if (d == 1) then
-        "boards/med/" ++ (show rand) ++ ".json"
+        "/boards/med/" ++ (show rand) ++ ".json"
     else if (d == 2) then
-        "boards/hard/" ++ (show rand) ++ ".json"
+        "/boards/hard/" ++ (show rand) ++ ".json"
     else
         error "invalid Difficulty"
 
