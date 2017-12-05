@@ -1,0 +1,1548 @@
+
+==================== FINAL INTERFACE ====================
+2017-12-05 04:42:27.237867 UTC
+
+interface main@main:TestHelper 8002
+  interface hash: 024323075e040febb5eaaf1cc7ee8b52
+  ABI hash: 5fe31af9865c9635d3f0824a407594b9
+  export-list hash: ed9ede7dbc0f374095ab9970453a812b
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: a8b714ccc7496bcd5f88af9d3b5d9770
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Sudoku.emptyBoard
+  TestHelper.duplicateInCell
+  TestHelper.duplicateInCol
+  TestHelper.duplicateInRow
+  TestHelper.solvableBoard
+  TestHelper.solvedBoard
+  TestHelper.unsolvableBoard
+module dependencies: Sudoku
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  Sudoku 703f11f8faee305d819e29fdbf479cd7
+  exports: b8b5613faa994e64413db53635a90ca7
+  Board 2117c28db0956310562974a848082a01
+  Board ab428a01faeab1b8fe5e7f3fa5e5d71a
+  emptyBoard 66b3824146e5d6642dade016638805c4
+c6c8bbf3dd108bf0460b2eec93fabeff
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   TestHelper.$trModule2
+                   TestHelper.$trModule1) -}
+85a5d684ef4ae92f876973b69bb36690
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "TestHelper"#) -}
+10ca75e157f3cbb960dae6457bfe695a
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+d37943604c11e1cf3ddfdc44f9e0fffe
+  duplicateInCell :: Sudoku.Board
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Sudoku.Board
+                   TestHelper.duplicateInCell2
+                   TestHelper.duplicateInCell1) -}
+50a50dbb4fe954aecb05deccebd6bdcf
+  duplicateInCell1 :: GHC.Base.Maybe GHC.Types.Bool
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just @ GHC.Types.Bool GHC.Types.False) -}
+c57b0fe36f37c9503b98d1e769e1e69a
+  duplicateInCell10 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCell11
+                   (GHC.Types.[] @ [GHC.Base.Maybe GHC.Types.Int])) -}
+c181d50ee5d093276c08fa5fa7657932
+  duplicateInCell11 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInCell12) -}
+e3a2dad8d378509d711999ed371cc18e
+  duplicateInCell12 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInCell13) -}
+38c2c6b5c73775901ea3f73b4512df44
+  duplicateInCell13 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInCell14) -}
+d063199f175f915b9259f8a00841c879
+  duplicateInCell14 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInCell15) -}
+3d9a77eed44beea40693fe6eb3569bf0
+  duplicateInCell15 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInCell16) -}
+15753bf95447e5309f591ad5fa09d806
+  duplicateInCell16 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInCell17) -}
+12991a4be5bef1cf1bcc21b753df8385
+  duplicateInCell17 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInCell18) -}
+4eba03554c14826ce25f0bf0c3b600cd
+  duplicateInCell18 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInCell19) -}
+6fde83092861bf7a8f6e8001b12b0638
+  duplicateInCell19 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   (GHC.Types.[] @ (GHC.Base.Maybe GHC.Types.Int))) -}
+90132388cfd152af706ad255e6516a3a
+  duplicateInCell2 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCell20
+                   TestHelper.duplicateInCell3) -}
+372c8de9cf7dbd9e240aed18a7e1be84
+  duplicateInCell20 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell21
+                   TestHelper.duplicateInCell12) -}
+9f9bd6f89762d510c0c05342bf5f656e
+  duplicateInCell21 :: GHC.Base.Maybe GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ GHC.Types.Int
+                   TestHelper.duplicateInCell22) -}
+f611bb4ba68f328fccd9547aeaa48dd2
+  duplicateInCell22 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
+d9622181b7c522224984cecb78c0d2af
+  duplicateInCell23 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInCell24) -}
+bbaa05b2dd8fb438a6cc638fcda78c5a
+  duplicateInCell24 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell25
+                   TestHelper.duplicateInCell13) -}
+7d3b035af03d474fb2b5048ee3a2d0a6
+  duplicateInCell25 :: GHC.Base.Maybe GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ GHC.Types.Int
+                   TestHelper.duplicateInCell26) -}
+6b92263f8fc50863a59fa27775cdc8d8
+  duplicateInCell26 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2#) -}
+d08902709788c88bd4c81b19183403d6
+  duplicateInCell27 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInCell28) -}
+8976e434acb6dc6d065954f5746e187e
+  duplicateInCell28 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell21
+                   TestHelper.duplicateInCell13) -}
+3fe9bb347624dc96d88846e45822e740
+  duplicateInCell3 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCell27
+                   TestHelper.duplicateInCell4) -}
+b0f9eae3ef881c1d6c533e64ee404452
+  duplicateInCell4 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCell11
+                   TestHelper.duplicateInCell5) -}
+838b7faff0c16d15cf59c705bfe0316c
+  duplicateInCell5 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCell11
+                   TestHelper.duplicateInCell6) -}
+14f6ad24e3282d38192701647d1bfe67
+  duplicateInCell6 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCell23
+                   TestHelper.duplicateInCell7) -}
+fa8b22c9fedcadeefe81a45900148f31
+  duplicateInCell7 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCell11
+                   TestHelper.duplicateInCell8) -}
+7600630fb10b189441ed7cf19395762d
+  duplicateInCell8 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCell11
+                   TestHelper.duplicateInCell9) -}
+d9295ec34cb9438bf6251d4a61176e9d
+  duplicateInCell9 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCell20
+                   TestHelper.duplicateInCell10) -}
+11452e9b16faed01b925e9ba7a7911b0
+  duplicateInCol :: Sudoku.Board
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Sudoku.Board
+                   TestHelper.duplicateInCol1
+                   TestHelper.duplicateInCell1) -}
+886cf0cdd3a347c117909f64789fb098
+  duplicateInCol1 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCol3
+                   TestHelper.duplicateInCol2) -}
+73cf4544f6872d20898a736facb7b895
+  duplicateInCol2 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCell11
+                   TestHelper.duplicateInCell4) -}
+7af1eef85455b5bc1a1fdcb135eb718b
+  duplicateInCol3 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell21
+                   TestHelper.duplicateInCell24) -}
+ae04598631d08cb552844de9aec53ad2
+  duplicateInRow :: Sudoku.Board
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Sudoku.Board
+                   TestHelper.duplicateInRow1
+                   TestHelper.duplicateInCell1) -}
+cb6780281d6dca2a321972aa0ada30f0
+  duplicateInRow1 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInRow65
+                   TestHelper.duplicateInRow2) -}
+1f93b54fcea5e8dac210959df2301ba1
+  duplicateInRow10 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow11) -}
+e88be59d495b2d788b037d6bae78529a
+  duplicateInRow11 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow18
+                   TestHelper.duplicateInRow12) -}
+92a9b1a64e789a2d8aba78b20ad431d6
+  duplicateInRow12 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow13) -}
+f1a3ec9a31d69826a796c48c32711bf7
+  duplicateInRow13 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow14) -}
+f74c259f8799a3d5c3d37cdf1f7df8e5
+  duplicateInRow14 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow15) -}
+158d0e4285af909d78c0a52c14ef35d1
+  duplicateInRow15 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow16) -}
+dc5d330c83b1f8c9b5e2c0afaec82918
+  duplicateInRow16 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow17) -}
+d0e820d40915b2f906059aa74f099747
+  duplicateInRow17 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow18
+                   TestHelper.duplicateInCell19) -}
+5e643b9462241c0728fb8c7d95b52cd6
+  duplicateInRow18 :: GHC.Base.Maybe GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ GHC.Types.Int
+                   TestHelper.duplicateInRow19) -}
+bb227aaeef268a7d280f9b108a5c48c1
+  duplicateInRow19 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 9#) -}
+6677d3a9dfa02888e7a0cdc2c89506f0
+  duplicateInRow2 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCell11
+                   TestHelper.duplicateInRow3) -}
+adab0812064d5aec4f687176d92a7abb
+  duplicateInRow20 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow21) -}
+5018106ec6e0bc4ddd775dbefd66ea2d
+  duplicateInRow21 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow22) -}
+9180a83db7464a490c45f3122a1025c1
+  duplicateInRow22 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow23) -}
+28fdc88518b2c81852a45a2e5863f24a
+  duplicateInRow23 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow28
+                   TestHelper.duplicateInRow24) -}
+121069930f0bc4e588c5ef8f21faebc4
+  duplicateInRow24 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow25) -}
+b5b63579c32bdc1aab8dfbb430a92977
+  duplicateInRow25 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow26) -}
+fdab5e30c1d9872524c2df888a402dac
+  duplicateInRow26 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow27) -}
+832f230ac2fb508cd5fdb2f75ab0f79e
+  duplicateInRow27 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow28
+                   TestHelper.duplicateInCell19) -}
+5870b216ca85116e3bdf83efc05b7e8d
+  duplicateInRow28 :: GHC.Base.Maybe GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ GHC.Types.Int
+                   TestHelper.duplicateInRow29) -}
+7f6c97e37bc79211f8c5d3314a2dcfa3
+  duplicateInRow29 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 4#) -}
+bc6359abc1dc94704b77f820a59e62d2
+  duplicateInRow3 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInRow55
+                   TestHelper.duplicateInRow4) -}
+15cca40911722a8b4a296091c1a1a1e3
+  duplicateInRow30 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow31) -}
+3edfe7e15fc410f9738d3d91c76b9f0c
+  duplicateInRow31 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow32) -}
+4716be64f5c3d16ad95efbdf896e04f1
+  duplicateInRow32 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow36
+                   TestHelper.duplicateInRow33) -}
+efd4660497929cd045d218ef3f86a369
+  duplicateInRow33 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow34) -}
+83ff2ff09362a7e6f41528e064180d42
+  duplicateInRow34 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow35) -}
+bc89ce2ed01d580efd0ad4608fef1518
+  duplicateInRow35 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow36
+                   TestHelper.duplicateInCell17) -}
+7ff9b30929aac755a5edec91f57a2dc6
+  duplicateInRow36 :: GHC.Base.Maybe GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ GHC.Types.Int
+                   TestHelper.duplicateInRow37) -}
+d23191dfa4ff47fec6bd888a79236629
+  duplicateInRow37 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 8#) -}
+7306a7de9f74244e4b8b08508f0e9b78
+  duplicateInRow38 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow39) -}
+56d18e6be02198371800ca8dd94dbf0e
+  duplicateInRow39 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow48
+                   TestHelper.duplicateInRow40) -}
+ac2806301a7b37f98b1171b461cc4bd4
+  duplicateInRow4 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCell11
+                   TestHelper.duplicateInRow5) -}
+e300fd21ac60bf57275834e136f9ae2a
+  duplicateInRow40 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow41) -}
+dcfd115454446536501767947d875b7e
+  duplicateInRow41 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow46
+                   TestHelper.duplicateInRow42) -}
+632d6a3884c46b517871cfdcb1fe05f7
+  duplicateInRow42 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow43) -}
+d90048f4619d30223abf1109cd550bb1
+  duplicateInRow43 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow44) -}
+b312228378806feaac6f86ac5d328266
+  duplicateInRow44 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow45) -}
+02953d3604a1e030c1feeaa4dbef42c6
+  duplicateInRow45 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow46
+                   TestHelper.duplicateInCell19) -}
+2263066d9e87581549ef2584807011da
+  duplicateInRow46 :: GHC.Base.Maybe GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ GHC.Types.Int
+                   TestHelper.duplicateInRow47) -}
+adb23e8830ad08bc53df06ec5d63a5e5
+  duplicateInRow47 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 6#) -}
+0e81069bb69215aa01dd8e5f9706e245
+  duplicateInRow48 :: GHC.Base.Maybe GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ GHC.Types.Int
+                   TestHelper.duplicateInRow49) -}
+29f1b93be466c4be90ba0732c1b6a69f
+  duplicateInRow49 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 7#) -}
+9dab6c647aba3513dca37829c2e8c245
+  duplicateInRow5 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInRow50
+                   TestHelper.duplicateInRow6) -}
+8c034c4170bd1a044ef0a0765560bc1b
+  duplicateInRow50 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell25
+                   TestHelper.duplicateInRow51) -}
+7828ba6d0eed08161bd2997872278e05
+  duplicateInRow51 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow52) -}
+28a1506fe0fd16edbcaf985a8d16e0f2
+  duplicateInRow52 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow53) -}
+15531b8fdde96612399f2666422c69aa
+  duplicateInRow53 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow54) -}
+bc2b9a9f4d39abf3b967054567f4474d
+  duplicateInRow54 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell25
+                   TestHelper.duplicateInCell16) -}
+6f202838abf292c0f1efbae1bc862bec
+  duplicateInRow55 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow63
+                   TestHelper.duplicateInRow56) -}
+e2631684b7f1d9f1c91a5c8a22063a33
+  duplicateInRow56 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow57) -}
+f9c1b909a5c50ccc6729d0aee049f47f
+  duplicateInRow57 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow58) -}
+25efefe89da6befebbf6c57bd2468e1d
+  duplicateInRow58 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow63
+                   TestHelper.duplicateInRow59) -}
+751cee3a4de2c169614ea81c65748a7d
+  duplicateInRow59 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow60) -}
+b5587f2b601fc52598a4cbd4a24cf467
+  duplicateInRow6 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInRow38
+                   TestHelper.duplicateInRow7) -}
+a69e5c23358b48b4aa6329a63b24e05f
+  duplicateInRow60 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow61
+                   TestHelper.duplicateInRow26) -}
+7e0a6ca3ce81f19aa8fdfc6a49f5e14c
+  duplicateInRow61 :: GHC.Base.Maybe GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ GHC.Types.Int
+                   TestHelper.duplicateInRow62) -}
+3c97e85f4580396f2a14a7cb54371384
+  duplicateInRow62 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 5#) -}
+85ad667f5e547660ae7dbb49c394d72c
+  duplicateInRow63 :: GHC.Base.Maybe GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ GHC.Types.Int
+                   TestHelper.duplicateInRow64) -}
+546bd1a81fae4c9e721de570249927c3
+  duplicateInRow64 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 3#) -}
+314a89f2d9e5a35df225dbb1474a6a48
+  duplicateInRow65 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell21
+                   TestHelper.duplicateInRow66) -}
+f37cc1210a5c02bd4eada676cff5915d
+  duplicateInRow66 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow67) -}
+b371527a3e70de49dc75edfbae30f81e
+  duplicateInRow67 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow68) -}
+b59d72ffa6e1f69a15a7507698243da3
+  duplicateInRow68 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow69) -}
+e40b32bfd31b3f42e221665e0242cf49
+  duplicateInRow69 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow70) -}
+7f72e431299b791e80de5907b8fd3d1b
+  duplicateInRow7 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInRow30
+                   TestHelper.duplicateInRow8) -}
+0a379e0a58e4ad537a6e2956a56a8f42
+  duplicateInRow70 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow71) -}
+070011552ff159803bf8034f948270b3
+  duplicateInRow71 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow72) -}
+7e47c968cb4fb2ebb1ccf5e413d67111
+  duplicateInRow72 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.duplicateInRow73) -}
+81bb33a1f2ff3c3e8d71b8855458729d
+  duplicateInRow73 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell21
+                   (GHC.Types.[] @ (GHC.Base.Maybe GHC.Types.Int))) -}
+63f50f98d0e9c3a4aabf838890ac37b4
+  duplicateInRow8 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInRow20
+                   TestHelper.duplicateInRow9) -}
+2f05ff4682f02f42e75c81cc077f8b21
+  duplicateInRow9 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInRow10
+                   (GHC.Types.[] @ [GHC.Base.Maybe GHC.Types.Int])) -}
+528ee865205338c8f6aa541e7c3ee32b
+  solvableBoard :: Sudoku.Board
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Sudoku.Board
+                   TestHelper.solvableBoard2
+                   TestHelper.solvableBoard1) -}
+2f5ec270efee3c71a9a3b13d1353a6a3
+  solvableBoard1 :: GHC.Base.Maybe GHC.Types.Bool
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just @ GHC.Types.Bool GHC.Types.True) -}
+7e71037ae92a3819aa69862a56e3dff2
+  solvableBoard10 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.solvableBoard11) -}
+c8389d50babfbc89a6cf15b2c6d9d911
+  solvableBoard11 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.solvableBoard12) -}
+60e61630445fe9eac6446d4e99c52e07
+  solvableBoard12 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.solvableBoard13) -}
+d6e97fdd871dab55d1457895a4e090e2
+  solvableBoard13 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.solvableBoard14) -}
+5eb3e5c1610bf96254b518b25232f036
+  solvableBoard14 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow18
+                   TestHelper.duplicateInCell16) -}
+8691402491c3d84310ef67a1fc6bd9aa
+  solvableBoard2 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCell11
+                   TestHelper.solvableBoard3) -}
+a0297b237f83eb8244cf1dda89aaefa3
+  solvableBoard3 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCell11
+                   TestHelper.solvableBoard4) -}
+a912023b47f91f5c1fe8f9d55a12f8c0
+  solvableBoard4 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCell11
+                   TestHelper.solvableBoard5) -}
+2545b3b9b39aab06224eedde871ed3b2
+  solvableBoard5 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCell11
+                   TestHelper.solvableBoard6) -}
+e91195f151d856af172c45f64ebe4c0e
+  solvableBoard6 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.solvableBoard10
+                   TestHelper.solvableBoard7) -}
+7e6ba7126b58e10bda6953609b112149
+  solvableBoard7 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCell11
+                   TestHelper.solvableBoard8) -}
+e058984469f9b0076d48471600d6e3aa
+  solvableBoard8 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCell11
+                   TestHelper.solvableBoard9) -}
+a987aaa3f34f03572ebb76981f7450d6
+  solvableBoard9 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCell11
+                   TestHelper.duplicateInCell10) -}
+3ea5736f5438f671f5dc5a0a5424c36b
+  solvedBoard :: Sudoku.Board
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Sudoku.Board
+                   TestHelper.solvedBoard1
+                   TestHelper.solvableBoard1) -}
+7439ba64c11df9bc1981b27ce57da6da
+  solvedBoard1 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.solvedBoard81
+                   TestHelper.solvedBoard2) -}
+d525730503e6eaaa52e6c67974d226cd
+  solvedBoard10 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow18
+                   TestHelper.solvedBoard11) -}
+86becbe19822e3c08124918ec33ab06f
+  solvedBoard11 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow48
+                   TestHelper.solvedBoard12) -}
+fe5406b969c5fc91154b9bb5fb42ba83
+  solvedBoard12 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow36
+                   TestHelper.solvedBoard13) -}
+ed1d1eb068f6a91086390be614307fe4
+  solvedBoard13 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow61
+                   TestHelper.solvedBoard14) -}
+644dcadf0510aa8dcc713053f70a7894
+  solvedBoard14 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow63
+                   TestHelper.solvedBoard15) -}
+c30b0c9987408c484ecc27d69e568e34
+  solvedBoard15 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell21
+                   TestHelper.solvedBoard16) -}
+6de6c2ad646ed56d0a5eb9382e074c6d
+  solvedBoard16 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow46
+                   TestHelper.solvedBoard17) -}
+362fbb0529bdf4c2c178f42c6b6c47e0
+  solvedBoard17 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow28
+                   TestHelper.solvedBoard18) -}
+2396366c4511daa5ceb69ab6b7f17d14
+  solvedBoard18 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell25
+                   (GHC.Types.[] @ (GHC.Base.Maybe GHC.Types.Int))) -}
+08c2f8a23c879e78198f0965c3257f75
+  solvedBoard19 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow46
+                   TestHelper.solvedBoard20) -}
+8ed73ccfc2e39f7979d12ebf623654f0
+  solvedBoard2 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.solvedBoard72
+                   TestHelper.solvedBoard3) -}
+8e921dfedd8b8fc444e8344e17fbf99c
+  solvedBoard20 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow28
+                   TestHelper.solvedBoard21) -}
+166e50bf1709f0e12b482ffe33a32aae
+  solvedBoard21 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell25
+                   TestHelper.solvedBoard22) -}
+29882545e7d942cbca12805b8539af99
+  solvedBoard22 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow18
+                   TestHelper.solvedBoard23) -}
+c0f8b52764380ea8fcc4ba289849861d
+  solvedBoard23 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow48
+                   TestHelper.solvedBoard24) -}
+39145115d7bb01ff6a19468f016e8a30
+  solvedBoard24 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow36
+                   TestHelper.solvedBoard25) -}
+81a4d42959bb1ac8de3a3325fe7e317d
+  solvedBoard25 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow61
+                   TestHelper.solvedBoard26) -}
+8524a3c6976b9eb915f65356b98c4b49
+  solvedBoard26 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow63
+                   TestHelper.duplicateInRow73) -}
+fef3662fa1cce4f217d5b8c3363ed4f8
+  solvedBoard27 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow61
+                   TestHelper.solvedBoard28) -}
+6d8e66138ae91b18337da36d09ba6af4
+  solvedBoard28 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow63
+                   TestHelper.solvedBoard29) -}
+49c178aaf1cf1508850d27c94917d6fd
+  solvedBoard29 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell21
+                   TestHelper.solvedBoard30) -}
+a9de11ed0239b2ad84207c8fe398cc75
+  solvedBoard3 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.solvedBoard63
+                   TestHelper.solvedBoard4) -}
+17d30954faf4a9e974a43b242e0d955d
+  solvedBoard30 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow46
+                   TestHelper.solvedBoard31) -}
+2e028be8e1462dac3df46b5d91ec3f0a
+  solvedBoard31 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow28
+                   TestHelper.solvedBoard32) -}
+73c0f50d5d004868d771077f2786b740
+  solvedBoard32 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell25
+                   TestHelper.solvedBoard33) -}
+1a76ac17aaed7855d56a4effd7d014f7
+  solvedBoard33 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow18
+                   TestHelper.solvedBoard34) -}
+b706226901e6bf405d5794f95e56ea05
+  solvedBoard34 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow48
+                   TestHelper.solvedBoard35) -}
+6aae511a54e6173a64db907fc7bf2306
+  solvedBoard35 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow36
+                   (GHC.Types.[] @ (GHC.Base.Maybe GHC.Types.Int))) -}
+42053c6715531f3aa80a7790031d67ca
+  solvedBoard36 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow36
+                   TestHelper.solvedBoard37) -}
+49ed3f05befe0df7411bf03b7627b669
+  solvedBoard37 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow18
+                   TestHelper.solvedBoard38) -}
+90f042e9df9319ee87dd05ec6172d9ef
+  solvedBoard38 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow48
+                   TestHelper.solvedBoard39) -}
+cf0ba03595c44c0baefbc7f2637c89d0
+  solvedBoard39 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell25
+                   TestHelper.solvedBoard40) -}
+74567bcee7ac7e51dcdc3b63d9b3ea3a
+  solvedBoard4 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.solvedBoard54
+                   TestHelper.solvedBoard5) -}
+384a49bdfb7954ee9333acab82eb095b
+  solvedBoard40 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell21
+                   TestHelper.solvedBoard41) -}
+4657d8c5159cff58bfef9de44de5ace7
+  solvedBoard41 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow28
+                   TestHelper.solvedBoard42) -}
+ab57cb818986739fb363a8e8c2f7c5ad
+  solvedBoard42 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow63
+                   TestHelper.solvedBoard43) -}
+03acd81d464271575dde348a3d208e97
+  solvedBoard43 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow46
+                   TestHelper.solvedBoard44) -}
+e0784a8d3383b42d24b0ace610f5b29d
+  solvedBoard44 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow61
+                   (GHC.Types.[] @ (GHC.Base.Maybe GHC.Types.Int))) -}
+098fa96cb6f1f4c31d3c02d70d54f4ca
+  solvedBoard45 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow63
+                   TestHelper.solvedBoard46) -}
+99224f0f5717b32f30cfd5f3037e4513
+  solvedBoard46 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow46
+                   TestHelper.solvedBoard47) -}
+1b02438afe9bde0893a4c3ae2522f749
+  solvedBoard47 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow61
+                   TestHelper.solvedBoard48) -}
+5c0b2896f77511c785dc4e043aa963a1
+  solvedBoard48 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow36
+                   TestHelper.solvedBoard49) -}
+eb351c95cde0c5a25ae2211d105cb1a5
+  solvedBoard49 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow18
+                   TestHelper.solvedBoard50) -}
+02926e0e445f062a22a3873979ce57a1
+  solvedBoard5 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.solvedBoard45
+                   TestHelper.solvedBoard6) -}
+2adec562f64230dba29bcfbfd3774f68
+  solvedBoard50 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow48
+                   TestHelper.solvedBoard51) -}
+0db36abf1a056a9f36adc568043297fb
+  solvedBoard51 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell25
+                   TestHelper.solvedBoard52) -}
+9c3dfb3d1227f043e7601b05cb21df44
+  solvedBoard52 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell21
+                   TestHelper.solvedBoard53) -}
+791eb144e0894bffc3efc0ecb0182774
+  solvedBoard53 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow28
+                   (GHC.Types.[] @ (GHC.Base.Maybe GHC.Types.Int))) -}
+13cf609a10a3e810a59863db41ffa665
+  solvedBoard54 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell25
+                   TestHelper.solvedBoard55) -}
+9fca4110844f97145d6afc8aad24fcdc
+  solvedBoard55 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell21
+                   TestHelper.solvedBoard56) -}
+2e55b683153d3a06c3c3ef2eab384135
+  solvedBoard56 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow28
+                   TestHelper.solvedBoard57) -}
+3a8dd8e6da00493fb62aaa3214fe2cc2
+  solvedBoard57 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow63
+                   TestHelper.solvedBoard58) -}
+11c79209dd20d76720da52615b5a65b3
+  solvedBoard58 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow46
+                   TestHelper.solvedBoard59) -}
+1fec7e727946dd61be3450ed39b8c02b
+  solvedBoard59 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow61
+                   TestHelper.solvedBoard60) -}
+567901bec4b53ca1d6cc7de1d56235a9
+  solvedBoard6 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.solvedBoard36
+                   TestHelper.solvedBoard7) -}
+ff5d00835684c0aa676f06b2dc38c22e
+  solvedBoard60 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow36
+                   TestHelper.solvedBoard61) -}
+3ee83e8b96f04adc4c290323de1142c0
+  solvedBoard61 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow18
+                   TestHelper.solvedBoard62) -}
+761800cb759086fa3c6603eb3c79f505
+  solvedBoard62 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow48
+                   (GHC.Types.[] @ (GHC.Base.Maybe GHC.Types.Int))) -}
+c37b71dfb11984bf26e66beb6b6def22
+  solvedBoard63 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow48
+                   TestHelper.solvedBoard64) -}
+7a5b47c2392c4cf204c921b6c41e0803
+  solvedBoard64 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow36
+                   TestHelper.solvedBoard65) -}
+15f045758c1af064d281884054fcba8f
+  solvedBoard65 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow18
+                   TestHelper.solvedBoard66) -}
+7b2e9a4ec2d5c4bf55d3b8b61fd78229
+  solvedBoard66 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell21
+                   TestHelper.solvedBoard67) -}
+be2b836530f81a34373413e614d38c2e
+  solvedBoard67 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell25
+                   TestHelper.solvedBoard68) -}
+b1e8418ec1d35e5b33b44c564b52931e
+  solvedBoard68 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow63
+                   TestHelper.solvedBoard69) -}
+e391a4e90fb5bb23b324ddb3f13009dd
+  solvedBoard69 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow28
+                   TestHelper.solvedBoard70) -}
+c345fbf5edde9b7b7838a5e5a2e0376e
+  solvedBoard7 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.solvedBoard27
+                   TestHelper.solvedBoard8) -}
+ea9ff7cd8aaf6fd846fd932d9fe1df76
+  solvedBoard70 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow61
+                   TestHelper.solvedBoard71) -}
+37ba01cc9e99dd173b7be7364ca4b0cf
+  solvedBoard71 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow46
+                   (GHC.Types.[] @ (GHC.Base.Maybe GHC.Types.Int))) -}
+f609186dd313d219bf985d00579bf106
+  solvedBoard72 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow28
+                   TestHelper.solvedBoard73) -}
+e9a388205b96e82177831fe015e5d98f
+  solvedBoard73 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow61
+                   TestHelper.solvedBoard74) -}
+b55ae51d4b3c8291cf4378a40c2b8330
+  solvedBoard74 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow46
+                   TestHelper.solvedBoard75) -}
+b9baa0bf183ae29c15761fb1b0375b40
+  solvedBoard75 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow48
+                   TestHelper.solvedBoard76) -}
+7136d04283741b9c5cd35ed6bd5fec3c
+  solvedBoard76 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow36
+                   TestHelper.solvedBoard77) -}
+7b13d4f4d77cd760e7ae39d8b03664b7
+  solvedBoard77 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow18
+                   TestHelper.solvedBoard78) -}
+d92e79b9dc54f73cce50e697f712e293
+  solvedBoard78 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell21
+                   TestHelper.solvedBoard79) -}
+27075fd4776dfe1637bc848765adf10d
+  solvedBoard79 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell25
+                   TestHelper.solvedBoard80) -}
+240489954a6144c46b86934a7162990b
+  solvedBoard8 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.solvedBoard19
+                   TestHelper.solvedBoard9) -}
+7535c6e915d9623ca50f0ac811222f92
+  solvedBoard80 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow63
+                   (GHC.Types.[] @ (GHC.Base.Maybe GHC.Types.Int))) -}
+5f15142b8f48ee42ec7454bc79ac9301
+  solvedBoard81 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell21
+                   TestHelper.solvedBoard82) -}
+fafd74400d575a99da03a45806c54989
+  solvedBoard82 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInCell25
+                   TestHelper.solvedBoard83) -}
+efb960fe6cb01a987a58c98c4cf49d16
+  solvedBoard83 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow63
+                   TestHelper.solvedBoard84) -}
+421d2d7784e1d19d74df51b0e309c71a
+  solvedBoard84 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow28
+                   TestHelper.solvedBoard85) -}
+eb6fb32910d51e3bf4603fd466511c19
+  solvedBoard85 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow61
+                   TestHelper.solvedBoard86) -}
+0e9d9e41ae529c0a8f3f9d2583d28292
+  solvedBoard86 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow46
+                   TestHelper.solvedBoard87) -}
+04e260699ad16a6fd69f2c494fa94983
+  solvedBoard87 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow48
+                   TestHelper.solvedBoard88) -}
+c757dec64b53b729aff22f60c003d111
+  solvedBoard88 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow36
+                   TestHelper.solvedBoard89) -}
+722ca05ceb184b930c268dd3395a87de
+  solvedBoard89 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow18
+                   (GHC.Types.[] @ (GHC.Base.Maybe GHC.Types.Int))) -}
+23eeafb6ccd04c373f08fee66595708f
+  solvedBoard9 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.solvedBoard10
+                   (GHC.Types.[] @ [GHC.Base.Maybe GHC.Types.Int])) -}
+2bb98e333d2383a5c23b2f1b95a3cbbf
+  unsolvableBoard :: Sudoku.Board
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Sudoku.Board
+                   TestHelper.unsolvableBoard1
+                   TestHelper.solvableBoard1) -}
+a2f98e4348e8c829b803fabd241f5373
+  unsolvableBoard1 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCell11
+                   TestHelper.unsolvableBoard2) -}
+5b19845ab038aa087893da7539c35ba9
+  unsolvableBoard2 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCell11
+                   TestHelper.unsolvableBoard3) -}
+d31ddb741cf13a26d7bf3b35ed0defe0
+  unsolvableBoard3 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.duplicateInCell11
+                   TestHelper.unsolvableBoard4) -}
+afed9ed2093142bf301e60be8455d2ef
+  unsolvableBoard4 :: [[GHC.Base.Maybe GHC.Types.Int]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Base.Maybe GHC.Types.Int]
+                   TestHelper.unsolvableBoard5
+                   TestHelper.solvableBoard6) -}
+0e66c652ee48269e60911e25c3fca482
+  unsolvableBoard5 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.unsolvableBoard6) -}
+5082fdee9f77d9826bce9de8587256bd
+  unsolvableBoard6 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.unsolvableBoard7) -}
+d9cbdfc612215db774b90385ba15528e
+  unsolvableBoard7 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   TestHelper.unsolvableBoard8) -}
+b890d43440ff4e7e9b87aa71156a4a95
+  unsolvableBoard8 :: [GHC.Base.Maybe GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.Maybe GHC.Types.Int)
+                   TestHelper.duplicateInRow18
+                   TestHelper.duplicateInCell15) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
