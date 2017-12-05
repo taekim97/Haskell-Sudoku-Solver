@@ -4,6 +4,8 @@ import System.Environment
 import Data.Monoid
 import Debug.Trace
 
+
+
 import TestHelper
 import Sudoku
 

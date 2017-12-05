@@ -1,15 +1,1 @@
-{
-    "board":[
-        [null, 1, 9, 5, 7, null, null, 1, null],
-        [null, null, null, 1, null, null, null, null, 3],
-        [4, null, null, null, null, 3, 7, null, 6],
-        [null, null, 6, 4, null, 2, 3, null, 7],
-        [1, null, null, null, null, null null, null, 5],
-        [9, null, 4, 3, null, 8, 2, null, null],
-        [7, null, 8, 6, null, null, null, null, 2],
-        [6, null, null, null, null, 7, null, null, null],
-        [null, null, null, null, 9, 5, 6, 7, null]
-    ]
-    , "valid":true
-
-}
+Board [[Nothing,Just 1,Just 9,Just 5,Just 7,Nothing,Nothing,Just 1,Nothing],[Nothing,Nothing,Nothing,Just 1,Nothing,Nothing,Nothing,Nothing,Just 3],[Just 4,Nothing,Nothing,Nothing,Nothing,Just 3,Just 7,Nothing,Just 6],[Nothing,Nothing,Just 6,Just 4,Nothing,Just 2,Just 3,Nothing,Just 7],[Just 1,Nothing,Nothing,Nothing,Nothing,Nothing,Nothing,Nothing,Just 5],[Just 9,Nothing,Just 4,Just 3,Nothing,Just 8,Just 2,Nothing,Nothing],[Just 7,Nothing,Just 8,Just 6,Nothing,Nothing,Nothing,Nothing,Just 2],[Just 6,Nothing,Nothing,Nothing,Nothing,Just 7,Nothing,Nothing,Nothing],[Nothing,Nothing,Nothing,Nothing,Just 9,Just 5,Just 6,Just 7,Nothing]] (Just True)
