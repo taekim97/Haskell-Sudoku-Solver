@@ -13,17 +13,12 @@ import           System.IO.Unsafe
 import           Control.Applicative
 
 
-
-staticFiles "../HSS_Site"
-
 data HelloWorld = HelloWorld
-    { getStatic :: Static
-    }
+
 
 
 mkYesod "HelloWorld" [parseRoutes|
 / HomeR GET
-/static StaticR Static getStatic
 /newBoard BoardR POST OPTIONS
 /checkBoard CheckR POST OPTIONS
 /solveBoard SolveBoardR POST OPTIONS
@@ -140,6 +135,4 @@ optionsCheckR = do
 
 
 main :: IO ()
-main = do
-    static@(Static settings) <- static "../HSS_Site"
-    warp 3000 $ HelloWorld static
+main = warp 3000 HelloWorld
