@@ -2,5 +2,11 @@ language: haskell
 ghc:
     - "7.8"
 
+before_script: cd HSS_Server
 script:
-    - cd HSS_Server && runhaskell test.hs checkRows && runhaskell test.hs checkCols && runhaskell test.hs checkCells && runhaskell test.hs checkSolvedBoard && runhaskell test.hs solvePossible && runhaskell test.hs solveImpossible
+    - runhaskell test.hs checkRows
+    - runhaskell test.hs checkCols
+    - runhaskell test.hs checkCells
+    - runhaskell test.hs checkSolvedBoard
+    - runhaskell test.hs solvePossible
+    - runhaskell test.hs solveImpossible
