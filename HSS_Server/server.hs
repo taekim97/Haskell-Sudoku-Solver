@@ -133,14 +133,3 @@ optionsCheckR = do
     addHeader "Access-Control-Allow-Methods" "PUT, OPTIONS"
     addHeader "Access-Control-Allow-Headers" "Origin, X-Requested-With, Content-Type, Accept"
     return $ RepPlain $ toContent ("" :: Text)
-
-
-getHerokuPort :: [String]
-getHerokuPort = unsafePerformIO $ getArgs
-
-
-portToInt ::  Int
-portToInt = let (x:xs) = getHerokuPort in (read x :: Int)
-
-main :: IO ()
-main = warp (portToInt) HelloWorld
