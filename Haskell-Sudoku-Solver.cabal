@@ -18,7 +18,7 @@ cabal-version:       >=1.10
 library
   build-depends:      base
   hs-source-dirs:     HSS_Server
-  exposed-modules:    Sudoku
+  exposed-modules:    Sudoku, TestHelper
 
 executable Haskell-Sudoku-Solver
   hs-source-dirs:       HSS_Server
