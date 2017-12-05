@@ -10,13 +10,10 @@ import           qualified Data.ByteString.Lazy as B
 import           Sudoku
 import           System.Random (randomR, newStdGen)
 import           System.IO.Unsafe
-import           System.Environment
 import           Control.Applicative
 
 
 data HelloWorld = HelloWorld
-
-
 
 mkYesod "HelloWorld" [parseRoutes|
 / HomeR GET
@@ -24,7 +21,6 @@ mkYesod "HelloWorld" [parseRoutes|
 /checkBoard CheckR POST OPTIONS
 /solveBoard SolveBoardR POST OPTIONS
 |]
-
 
 instance Yesod HelloWorld
 
@@ -57,11 +53,10 @@ getJSON :: [Char] -> IO B.ByteString
 getJSON filePath = B.readFile $ jsonFile filePath
 
 
-
-
 -- Welcome Page
 getHomeR :: Handler Html
 getHomeR = defaultLayout [whamlet|Hello World!|]
+
     --app <- getYesod
     --let indexPath = getRootDir app <$> "index.html"
     --sendFile "text/html" indexPath
@@ -78,11 +73,11 @@ chooseBoard :: Difficulty -> [Char]
 chooseBoard (Difficulty d) =
     let rand = unsafePerformIO $ getRandNum in
     if (d == 0) then
-        "/boards/easy/" ++ (show rand) ++ ".json"
+        "boards/easy/" ++ (show rand) ++ ".json"
     else if (d == 1) then
-        "/boards/med/" ++ (show rand) ++ ".json"
+        "boards/med/" ++ (show rand) ++ ".json"
     else if (d == 2) then
-        "/boards/hard/" ++ (show rand) ++ ".json"
+        "boards/hard/" ++ (show rand) ++ ".json"
     else
         error "invalid Difficulty"
 
@@ -133,3 +128,8 @@ optionsCheckR = do
     addHeader "Access-Control-Allow-Methods" "PUT, OPTIONS"
     addHeader "Access-Control-Allow-Headers" "Origin, X-Requested-With, Content-Type, Accept"
     return $ RepPlain $ toContent ("" :: Text)
+
+
+main :: IO ()
+
+main = warp 3000 HelloWorld
