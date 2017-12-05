@@ -18,7 +18,7 @@ cabal-version:       >=1.10
 library
   build-depends:      base
   hs-source-dirs:     HSS_Server
-  exposed-modules:    Sudoku, TestHelper
+  exposed-modules:    Sudoku
 
 executable Haskell-Sudoku-Solver
   hs-source-dirs:       HSS_Server
@@ -35,6 +35,6 @@ executable Tests
   main-is:              test.hs
 
   build-depends:       base >=4.7 && <4.11
-  other-modules:       Sudoku, TestHelper
+  other-modules:       Sudoku
 
   default-language:    Haskell2010
