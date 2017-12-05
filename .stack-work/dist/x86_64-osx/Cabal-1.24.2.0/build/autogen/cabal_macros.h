@@ -14,6 +14,13 @@
   (major1) == 4 && (major2) <  9 || \
   (major1) == 4 && (major2) == 9 && (minor) <= 1)
 
+/* package directory-1.3.0.0 */
+#define VERSION_directory "1.3.0.0"
+#define MIN_VERSION_directory(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  3 || \
+  (major1) == 1 && (major2) == 3 && (minor) <= 0)
+
 /* package aeson-1.1.2.0 */
 #define VERSION_aeson "1.1.2.0"
 #define MIN_VERSION_aeson(major1,major2,minor) (\
@@ -112,14 +119,14 @@
   (major1) == 1 && (major2) <  24 || \
   (major1) == 1 && (major2) == 24 && (minor) <= 0)
 
-/* tool pkg-config-0.29.1 */
-#define TOOL_VERSION_pkg_config "0.29.1"
+/* tool pkg-config-0.29.2 */
+#define TOOL_VERSION_pkg_config "0.29.2"
 #define MIN_TOOL_VERSION_pkg_config(major1,major2,minor) (\
   (major1) <  0 || \
   (major1) == 0 && (major2) <  29 || \
-  (major1) == 0 && (major2) == 29 && (minor) <= 1)
+  (major1) == 0 && (major2) == 29 && (minor) <= 2)
 
-#define CURRENT_COMPONENT_ID "Haskell-Sudoku-Solver-0.1.0.0-8ZI9BOAxc5HwAXCVEWmwE"
+#define CURRENT_COMPONENT_ID "Haskell-Sudoku-Solver-0.1.0.0-3SDgj9MtqcG3Zn0p64G26E"
 
-#define CURRENT_PACKAGE_KEY "Haskell-Sudoku-Solver-0.1.0.0-8ZI9BOAxc5HwAXCVEWmwE"
+#define CURRENT_PACKAGE_KEY "Haskell-Sudoku-Solver-0.1.0.0-3SDgj9MtqcG3Zn0p64G26E"
 
