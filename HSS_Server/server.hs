@@ -10,6 +10,7 @@ import           qualified Data.ByteString.Lazy as B
 import           Sudoku
 import           System.Random (randomR, newStdGen)
 import           System.IO.Unsafe
+import           System.Environment
 import           Control.Applicative
 
 
@@ -134,5 +135,12 @@ optionsCheckR = do
     return $ RepPlain $ toContent ("" :: Text)
 
 
+getHerokuPort :: [String]
+getHerokuPort = unsafePerformIO $ getArgs
+
+
+portToInt ::  Int
+portToInt = let (x:xs) = getHerokuPort in (read x :: Int)
+
 main :: IO ()
-main = warp 3000 HelloWorld
+main = warp (portToInt) HelloWorld

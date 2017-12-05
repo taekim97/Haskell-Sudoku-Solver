@@ -1,2 +1,1 @@
-web: Haskell-Sudoku-Solver
-
+web: Haskell-Sudoku-Solver $PORT
